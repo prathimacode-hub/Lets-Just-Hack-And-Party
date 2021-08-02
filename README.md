@@ -7,6 +7,8 @@
 ![DataStax Astra](https://img.shields.io/badge/database-DataStax%20Astra-darkblue?style=for-the-badge&logo=appveyor)
 ----------------------------------------------------------------------------------------------------
 
+**This project won as a winner in category of Top Performing Teams in Hack Table 2021"
+
 ## INSPIRATION🌸✨👌
 
 We wanted to help out the beginners and thus we came up with this idea to help them by providing curated starter code for a wide variety of projects so that they can enthusiastically participate in hackathons without any hassles.
@@ -18,6 +20,8 @@ Github : https://github.com/Fennec2000GH/Lets-Just-Hack-and-Party
 Youtube : https://www.youtube.com/watch?v=zmM-HybqPsM
 
 Webpage Domain : https://www.letshackandpartycozweloveto.study/
+
+DevPost : https://devpost.com/software/let-s-just-hack-and-party-v0wxgf
 
 Thanks to MLH and GoDaddy Registry for providing a domain name that suits our project aptly.
 
