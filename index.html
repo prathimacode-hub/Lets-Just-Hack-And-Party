@@ -1,0 +1,703 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <link rel="icon" type="image/x-icon" href="https://image.flaticon.com/icons/png/512/1053/1053367.png">
+
+    <meta charset="utf-8">
+    <title> Let's Just Party </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- styles  -->
+    <link href="./styles/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <link href="./styles/index.css" rel="stylesheet" type="text/css">
+
+    <!-- chatbot syles -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" rel="stylesheet" type="text/css" />
+    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" rel="stylesheet" type="text/css" />
+    <link href="./styles/chatBot.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/timeline.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/chatBot.css" rel="stylesheet" type="text/css" />
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    <script src="./scripts/index.js"></script>
+
+</head>
+
+
+<body>
+    <!-- chatbot -->
+<!--     <div id="chatbot">
+        <h2>
+            Virtual Assistant
+        </h2>
+        <input type="text">
+    </div> -->
+
+    <!-- new chatbot -->
+
+	
+    <!-- Chat bot UI start -->
+    <div class="chat-screen">
+        <div class="chat-header">
+            <div class="chat-header-title">
+                Virtual Assistant
+            </div>
+            <div class="chat-header-option hide">
+                <span class="dropdown custom-dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink1" style="will-change: transform;">
+                    <a class="dropdown-item" href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bc32ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        Send Transcriptions
+                    </a>
+                    <a class="dropdown-item end-chat" href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bc32ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-power"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
+                        End Chat
+                    </a>
+                </div>
+            </span>
+            </div>
+        </div>
+        <div class="chat-mail">
+            <div class="row">
+                <div class="col-md-12 text-center mb-2">
+                    <p> What can I help you with? </p>
+                </div>
+            </div>
+            <div id="message-bar" class="row">
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input id="message-input" type="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-rounded btn-block" onclick="chat()">
+                        <img src="https://image.flaticon.com/icons/png/512/786/786407.png">    
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-body hide">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto;display: block;shape-rendering: auto;width: 43px;height: 20px;" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <circle cx="0" cy="44.1678" r="15" fill="#ffffff">
+                    <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="57.5;42.5;57.5;57.5" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.6s"></animate>
+                </circle> <circle cx="45" cy="43.0965" r="15" fill="#ffffff">
+                <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="57.5;42.5;57.5;57.5" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.39999999999999997s"></animate>
+            </circle> <circle cx="90" cy="52.0442" r="15" fill="#ffffff">
+                <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="57.5;42.5;57.5;57.5" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.19999999999999998s"></animate>
+            </circle></svg>
+        </div>
+    </div>
+    <div class="chat-input hide">
+        <input type="text" placeholder="Type a message...">
+        <div class="input-action-icon">
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></a>
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+    </div>
+
+    <div class="chat-bot-icon">
+        <img src="./images/we-are-here.svg" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square animate"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x "><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+    <!-- Chat Bot UI Ends -->
+    <!-- Time line Html Start -->
+    <h1 class="hide">Responsive Timeline using Flexbox</h1>
+
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="257be86a981729866f2fa61c-|49" defer=""></script>
+    <!-- Time line Html Ends -->
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".select2_el").select2({});
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            //Toggle fullscreen
+            $(".chat-bot-icon").click(function(e) {
+                $(this).children('img').toggleClass('hide');
+                $(this).children('svg').toggleClass('animate');
+                $('.chat-screen').toggleClass('show-chat');
+            });
+            $('.end-chat').click(function() {
+                $('.chat-body').addClass('hide');
+                $('.chat-input').addClass('hide');
+                $('.chat-session-end').removeClass('hide');
+                $('.chat-header-option').addClass('hide');
+            });
+        });
+    </script>
+
+    <!-- navbar -->
+    <div class="navbar-wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Responsive navbar -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+                    <h1 class="brand">
+                        <a href="index.html"> A Hub for <strong> Hackers </strong> </a>
+                    </h1>
+                    <!-- navigation -->
+                    <nav class="pull-right nav-collapse collapse">
+                        <ul id="menu-main" class="nav">
+                            <li>
+                                <a title="team" href="#purpose"> Purpose </a>
+                            </li>
+                            <li><a title="services" href="#starter-kits"> Starter Kits </a></li>
+                            <li><a title="featured-projects" href="#featured-projects"> featured-projects </a></li>
+                            <li><a title="blog" href="#blog"> Blog </a></li>
+                            <li><a title="contact" href="#contact"> Contact </a></li>
+                            <li><a href="page.html">Page</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header area -->
+    <div id="header-wrapper" class="header-slider">
+        <header class="clearfix">
+            <video autoplay muted loop id="video-background">
+                <source src="./videos/rocket.mp4" type="video/mp4">
+            </video>
+
+            <div class="logo">
+                <img src="./images/logo.jpg" alt="" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div id="main-flexslider" class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <p class="home-slide-content">
+                                        <strong> Launch </strong> projects from starter kits.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="home-slide-content">
+                                        <strong> Feature </strong> your best hacks.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="home-slide-content">
+                                        <strong> Build and send </strong> birthday cards to other hackers.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                    </div>
+                </div>
+            </div>
+
+        </header>
+    </div>
+
+
+    <!-- spacer section -->
+    <section class="spacer green">
+        <div class="container">
+            <div class="row">
+
+
+
+                <div class="span6 alignright flyLeft">
+                    <blockquote class="large">
+                        Those who can imagine anything, can create the impossible. <cite> Alan Turing </cite>
+                    </blockquote>
+                </div>
+                <div class="span6 aligncenter flyRight">
+                    <i class="icon-lightbulb icon-size"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end spacer section -->
+    <!-- section: team -->
+    <section id="about" class="section">
+        <div id="purpose" class="container">
+            <h4 id="purpose-heading"> Purpose </h4>
+            <div class="row">
+                <div id="purpose-statement">
+                    <div>
+                        <p>
+                            Hackathons enable hands-on experiences for people to collaborate, design, and bring an innovative idea to life with code. However,many new hackers and beginnersfind a difficult time locating the right resources to help them get started.
+                        </p>
+                        <p>
+                            This online hub for hackers serves just that. Not only can hackers from all skill levels and technology expertise find starter code and useful references, current hackers can also send invitations to their friends to partake in recommendedhackathons based
+                            ontheir own interests.
+                        </p>
+                        <p>
+                            If it is someone's birthday,we are especially excited to provide a digital birthday card with potential sponsored prizes and of course future hackathons that may interest the lucky recipient.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- end section: team -->
+    <!-- section: starter-kits -->
+    <section id="starter-kits" class="section orange">
+        <div class="container">
+            <h4> Starter Kits </h4>
+            <!-- Four columns -->
+            <div class="row">
+                <div class="span3 animated-fast flyIn">
+                    <div class="service-box">
+                        <img src="./images/icons/laptop.png" alt="" />
+                        <h2> Web Development </h2>
+                        <ul>
+                            <li>
+                                <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_"> Flask </a> 💎
+                                <a href="./starter-kits/flask.py" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://www.djangoproject.com" target="_"> Django </a> 💎
+                                <a href="./starter-kits/django.py" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://reactjs.org" target="_ "> React </a> 💎
+                                <a href="./starter-kits/react.js" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://angular.io" target="_"> Angular </a> 💎
+                                <a href="https://github.com/PatrickJS/angular-starter" target="_"> { Code } </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span3 animated flyIn ">
+                    <div class="service-box ">
+                        <img src="./images/icons/lab.png " alt=" " />
+                        <h2> Data Science + ML </h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.tensorflow.org" target="_"> Tensorflow </a> 💎
+                                <a href="./starter-kits/tensorflow.py" target="_" style="color: gold;"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://googleapis.dev/python/language/latest/usage.html" target="_"> GCloud NLP </a> 💎
+                                <a href="./starter-kits/google_cloud_natural_language_api.py" target="_"> { Code } </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span3 animated-fast flyIn ">
+                    <div class="service-box ">
+                        <img src="./images/icons/database.png " alt=" " />
+                        <h2> Databases </h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.mongodb.com" target="_"> MongoDB </a> 💎
+                                <a href="./starter-kits/mongodb.py" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://www.cockroachlabs.com" target="_"> CockroachDB </a> 💎
+                                <a href="./starter-kits/cockroachdb.py" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://www.datastax.com/products/datastax-astra" target="_"> DataStax Astra </a> 💎
+                                <a href="./starter-kits/datastax_astra.py" target="_"> { Code } </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span3 animated-slow flyIn ">
+                    <div class="service-box ">
+                        <img src="./images/icons/game-dev.png " alt=" " />
+                        <h2> Game Development </h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.pygame.org/news" target="_"> PyGame </a> 💎
+                                <a href="./starter-kits/pygame.py" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://www.ursinaengine.org" target="_"> Ursina </a> 💎
+                                <a href="./starter-kits/ursina.py" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://godotengine.org" target="_"> Godot </a> 💎
+                                <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting.html" target="_"> { Code } </a>
+                            </li>
+                            <li>
+                                <a href="https://godotengine.org" target="_"> Unity </a> 💎
+                                <a href="https://learn.unity.com/project/creator-kit-beginner-code" target="_"> { Code } </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section: starter-kits -->
+    <!-- section: featured-projects -->
+    <section id="featured-projects" class="section">
+        <div class="container clearfix">
+            <h4> Featured Projects </h4>
+
+        </div>
+        <div class="row">
+            <div class="span12">
+                <div id="portfolio-wrap">
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid print photography">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/1.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid print design web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/2.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid print design">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/3.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid photography web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/4.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid photography web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/5.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid photography web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/6.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid photography web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/7.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid photography">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/8.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid photography web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/9.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                    <!-- portfolio item -->
+                    <div class="portfolio-item grid design web">
+                        <div class="portfolio">
+                            <a href="./images/featured-projects/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+                                <img src="./images/featured-projects/10.png" alt="" />
+                                <div class="portfolio-overlay">
+                                    <div class="thumb-info">
+                                        <h5>Portfolio name</h5>
+                                        <i class="icon-plus icon-2x"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end portfolio item -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- spacer section -->
+    <section class="spacer bg3">
+        <div class="container">
+            <div class="row">
+                <div class="span12 aligncenter flyLeft">
+                    <blockquote class="large">
+                        Let's make a surprise birthday card for a close friend!
+                    </blockquote>
+                </div>
+                <div class="span12 aligncenter flyRight">
+                    <button id="birthday" onclick="birthday()">
+                        <i class="icon-rocket icon-10x">  </i> 
+                        <span> Launch Birthday Card </span>
+                    </button>
+                </div>
+            </div>
+    </section>
+    <!-- end spacer section -->
+
+    <!-- section: blog -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h4> Blog </h4>
+            <!-- Three columns -->
+            <div class="row">
+                <div class="span3">
+                    <div class="home-post">
+                        <div class="post-image">
+                            <img class="max-img" src="./images/blog/img1.jpg" alt="" />
+                        </div>
+                        <div class="post-meta">
+                            <i class="icon-file icon-2x"></i>
+                            <span class="date">June 19, 2013</span>
+                            <span class="tags"><a href="#">Design</a>, <a href="#">Blog</a></span>
+                        </div>
+                        <div class="entry-content">
+                            <h5><strong><a href="#">New design trends</a></strong></h5>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+                            </p>
+                            <a href="#" class="more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="home-post">
+                        <div class="post-image">
+                            <img class="max-img" src="./images/blog/img2.jpg" alt="" />
+                        </div>
+                        <div class="post-meta">
+                            <i class="icon-file icon-2x"></i>
+                            <span class="date">June 19, 2013</span>
+                            <span class="tags"><a href="#">Design</a>, <a href="#">News</a></span>
+                        </div>
+                        <div class="entry-content">
+                            <h5><strong><a href="#">Retro is great</a></strong></h5>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+                            </p>
+                            <a href="#" class="more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="home-post">
+                        <div class="post-image">
+                            <img class="max-img" src="./images/blog/img3.jpg" alt="" />
+                        </div>
+                        <div class="post-meta">
+                            <i class="icon-file icon-2x"></i>
+                            <span class="date">June 22, 2013</span>
+                            <span class="tags"><a href="#">Design</a>, <a href="#">Tips</a></span>
+                        </div>
+                        <div class="entry-content">
+                            <h5><strong><a href="#">Isometric mockup</a></strong></h5>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+                            </p>
+                            <a href="#" class="more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="home-post">
+                        <div class="post-image">
+                            <img class="max-img" src="./images/blog/img4.jpg" alt="" />
+                        </div>
+                        <div class="post-meta">
+                            <i class="icon-file icon-2x"></i>
+                            <span class="date">June 27, 2013</span>
+                            <span class="tags"><a href="#">News</a>, <a href="#">Tutorial</a></span>
+                        </div>
+                        <div class="entry-content">
+                            <h5><strong><a href="#">Free icon set</a></strong></h5>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+                            </p>
+                            <a href="#" class="more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blankdivider30"></div>
+            <div class="aligncenter">
+                <a href="#" class="btn btn-large btn-theme">More blog post</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- end spacer section -->
+    <!-- section: contact -->
+    <section id="contact" class="section green">
+        <div class="container">
+            <h4>Get in Touch</h4>
+            <p>
+                Feel free to send any question, comments, and suggestions.
+            </p>
+            <div class="blankdivider30">
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <div class="cform" id="contact-form">
+                        <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="errormessage"></div>
+                        <form action="" method="post" role="form" class="contactForm">
+                            <div class="row">
+                                <div class="span6">
+                                    <div class="field your-name form-group">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="field your-email form-group">
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="field subject form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <div class="field message form-group">
+                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <input type="submit" value="Send message" class="btn btn-theme pull-left">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ./span12 -->
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span6 offset3">
+
+                </div>
+            </div>
+        </div>
+        <!-- ./container -->
+    </footer>
+    <a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/jquery.scrollTo.js"></script>
+    <script src="./scripts/jquery.nav.js"></script>
+    <script src="./scripts/jquery.localScroll.js"></script>
+    <script src="./scripts/bootstrap.js"></script>
+    <script src="./scripts/jquery.prettyPhoto.js"></script>
+    <script src="./scripts/isotope.js"></script>
+    <script src="./scripts/jquery.flexslider.js"></script>
+    <script src="./scripts/inview.js"></script>
+    <script src="./scripts/animate.js"></script>
+    <script src="./scripts/custom.js"></script>
+    <script src="./contactform/contactform.js"></script>
+
+</body>
+
+</html>
