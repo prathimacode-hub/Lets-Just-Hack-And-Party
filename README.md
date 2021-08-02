@@ -7,7 +7,7 @@
 ![DataStax Astra](https://img.shields.io/badge/database-DataStax%20Astra-darkblue?style=for-the-badge&logo=appveyor)
 ----------------------------------------------------------------------------------------------------
 
-**This project won as a winner in category of Top Performing Teams in Hack Table 2021"
+**This project won as a winner in category of Top Performing Teams in Hack Table 2021**
 
 ## INSPIRATION🌸✨👌
 
